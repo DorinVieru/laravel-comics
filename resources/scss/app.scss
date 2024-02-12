@@ -55,6 +55,10 @@ header {
 /////////// 
 /// MAIN
 ///////////
+main{
+    background-color: #1C1C1C;
+}
+
 // JUMBOTRON 
 .jumbo {
     background-image: url('../img/jumbotron.jpg');
@@ -85,6 +89,48 @@ h6 {
     width: 50px;
     padding: 0;
 }
+
+// COMIC SECTION STYLE
+.card_container {
+    padding: 30px 0px;
+
+    h5 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .img-container {
+        img {
+            width: 190px;
+            height: 290px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 10px;
+            transition: 0.7s;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+        .price-tag {
+            color: white;
+            background-color: #0C7CEC;
+            padding: 2px 7px;
+            font-size: 13px;
+            border-radius: 10px;
+            position: relative;
+            bottom: 265px;
+            left: 155px;
+            cursor: pointer;
+        }
+    }
+}
+
+
 
 /////////// 
 /// FOOTER
@@ -157,10 +203,11 @@ h6 {
     
     img {
         padding: 0 10px;
-
-        &:hover{
+        transition: 0.7s;
+        
+        &:hover {
+            transform: scale(1.1);
             cursor: pointer;
-            width: 60px;
         }
     }
 }

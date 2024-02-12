@@ -25,6 +25,30 @@
        <div class="container-fluid jumbo">
             <button type="button" class="btn btn-primary button-series">CURRENT SERIES</button>
         </div>
+
+        {{-- COMICS SECTION --}}
+        <div class="container py-5">
+            <div class="row align-items-center">
+                @foreach ($comics as $comic)
+                        <div class="col-2 card_container">
+                            {{-- COMIC CARD --}}
+                            <div>
+                                <div class="img-container p-relative">
+                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                                    <span class="price-tag">{{ $comic['price'] }}</span>
+                                </div>
+                                <div>
+                                    <h5>{{ $comic['series'] }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- LOAD MORE BUTTON --}}
+                    <div class="text-center mt-3 mb-4">
+                        <button type="button" class="btn btn-primary">LOAD MORE</button>
+                    </div>
+            </div>
+        </div>
     </main>
 
     {{-- SECTION BG-BLUE --}}
