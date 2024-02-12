@@ -6,7 +6,7 @@
                     <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="Logo DC">
                 </a>
             </div>
-            <div class="col-10 d-flex align-items-center justify-content-end">
+            <div class="col-10 d-flex align-items-center justify-content-end section-nav">
                 <nav>
                     <ul class="list-unstyled d-flex">
                         <li class="nav-item">

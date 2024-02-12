@@ -16,9 +16,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-// HEADER
+/////////// 
+/// HEADER
+/////////// 
 header {
-    height: 100px;
+    height: 80px;
     margin: 10px 0;
 }
 
@@ -27,8 +29,12 @@ header {
     vertical-align: middle;
 
     img{
-        width: 100px;
+        width: 80px;
     }
+}
+
+.section-nav{
+    height: 100px;
 }
 
 .nav-item {
@@ -36,6 +42,10 @@ header {
     font-weight: 500;
 }
 
+/////////// 
+/// MAIN
+///////////
+// JUMBOTRON 
 .jumbo {
     background-image: url('../img/jumbotron.jpg');
     background-size: cover;
