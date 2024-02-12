@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
+    <link rel="icon" type="image/svg+xml" href="{{ Vite::asset('resources/img/favicon.ico') }}" />
+    <title>Laravel Comics - DC Comics</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,10 @@
 
     {{-- MAIN --}}
     <main>
-       
+        {{-- JUMBOTRON --}}
+       <div class="container-fluid jumbo">
+            <button type="button" class="btn btn-primary button-series">CURRENT SERIES</button>
+        </div>
     </main>
 
 </body>

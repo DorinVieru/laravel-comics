@@ -35,3 +35,17 @@ header {
     font-size: 13px;
     font-weight: 500;
 }
+
+.jumbo {
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    height: 500px;
+}
+
+.button-series {
+    position: absolute;
+    top: 600px;
+    left: 175px;
+    font-weight: 800;
+
+}
