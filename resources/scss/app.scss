@@ -22,25 +22,35 @@ body {
 header {
     height: 80px;
     margin: 10px 0;
-}
-
-.brand{
-    text-align: center;
-    vertical-align: middle;
-
-    img{
-        width: 80px;
+    
+    .brand{
+        text-align: center;
+        vertical-align: middle;
+    
+        img{
+            width: 80px;
+        }
+    }
+    
+    .section-nav{
+        height: 100px;
+    }
+    
+    .nav-item {
+        font-size: 13px;
+        font-weight: 500;
+    }
+    
+    .nav-link{
+        &.active,
+        &:hover {
+            color: #0C7CEC;
+            font-weight: 700;
+            border-bottom: 3px solid #0C7CEC;
+        }
     }
 }
 
-.section-nav{
-    height: 100px;
-}
-
-.nav-item {
-    font-size: 13px;
-    font-weight: 500;
-}
 
 /////////// 
 /// MAIN
@@ -54,8 +64,88 @@ header {
 
 .button-series {
     position: absolute;
-    top: 600px;
+    top: 580px;
     left: 175px;
     font-weight: 800;
 
+}
+
+/////////// 
+/// FOOTER
+///////////
+//TOP FOOTER
+.top-footer {
+    background-image: url('../img/footer-bg.jpg');
+    background-size: cover;
+    
+    .footer-logo {
+        background-image: url('../img/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+    }
+    
+    h3 {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+    
+    ul {
+        margin: 0;
+    
+        li {
+            padding: 5px 0;
+    
+            a {
+                color: gray;
+                font-size: 13px;
+                text-decoration: none;
+    
+                &:hover {
+                    color: #0C7CEC;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    p{
+        color: gray;
+        font-size: 14px;
+    }
+}
+
+
+//BOTTOM FOOTER
+.bottom-footer {
+    background-color: #303030;
+    padding: 30px;
+    
+    .button-footer {
+        border: 2px solid #0C7CEC;
+        background-color: #303030;
+        color: white;
+    
+        &:hover{
+            background-color: gray;
+        }
+    }
+    
+    h2 {
+        color: #0C7CEC;
+        font-size: 18px;
+        font-weight: 800;
+        padding: 8px 10px 0;
+    }
+    
+    img {
+        padding: 0 10px;
+
+        &:hover{
+            cursor: pointer;
+            width: 60px;
+        }
+    }
 }

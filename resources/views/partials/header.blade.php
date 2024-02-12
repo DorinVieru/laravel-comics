@@ -10,10 +10,10 @@
                 <nav>
                     <ul class="list-unstyled d-flex">
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() === 'characters' ? 'text-primary fw-bold' : ''}}" href="{{ route('characters') }}">CHARACTERS</a>
+                            <a class="nav-link {{ Route::currentRouteName() === 'characters' ? 'active' : ''}}" href="{{ route('characters') }}">CHARACTERS</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link {{ Route::currentRouteName() === 'comics' ? 'text-primary fw-bold' : ''}}" href="{{ route('comics') }}">COMICS</a>
+                            <a class="nav-link {{ Route::currentRouteName() === 'comics' ? 'active' : ''}}" href="{{ route('comics') }}">COMICS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">MOVIES</a>

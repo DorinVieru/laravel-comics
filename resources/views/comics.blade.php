@@ -27,6 +27,8 @@
         </div>
     </main>
 
+    {{-- FOOTER --}}
+    @include('partials.footer')
 </body>
 
 </html>
