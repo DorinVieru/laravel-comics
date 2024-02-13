@@ -42,10 +42,13 @@ header {
     }
     
     .nav-link{
+        transition: 0.2s;
+
         &.active,
         &:hover {
             color: #0C7CEC;
-            font-weight: 700;
+            font-weight: 800;
+            transform: scale(1.1);
             border-bottom: 3px solid #0C7CEC;
         }
     }
@@ -144,7 +147,6 @@ h6 {
         background-image: url('../img/dc-logo-bg.png');
         background-repeat: no-repeat;
         background-position: right;
-        background-size: cover;
     }
     
     h3 {

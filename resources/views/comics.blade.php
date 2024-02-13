@@ -1,55 +1,34 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/svg+xml" href="{{ Vite::asset('resources/img/favicon.ico') }}" />
-    <title>Laravel Comics - DC Comics</title>
+@section('content')
+    {{-- JUMBOTRON --}}
+    <div class="container-fluid jumbo">
+        <button type="button" class="btn btn-primary button-series">CURRENT SERIES</button>
+    </div>
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
-    {{-- HEADER --}}
-    @include('partials.header')
-
-    {{-- MAIN --}}
-    <main>
-        {{-- JUMBOTRON --}}
-       <div class="container-fluid jumbo">
-            <button type="button" class="btn btn-primary button-series">CURRENT SERIES</button>
-        </div>
-
-        {{-- COMICS SECTION --}}
-        <div class="container py-5">
-            <div class="row align-items-center">
-                @foreach ($comics as $comic)
-                        <div class="col-2 card_container">
-                            {{-- COMIC CARD --}}
+    {{-- COMICS SECTION --}}
+    <div class="container py-5">
+        <div class="row align-items-center">
+            @foreach ($comics as $comic)
+                    <div class="col-2 card_container">
+                        {{-- COMIC CARD --}}
+                        <div>
+                            <div class="img-container p-relative">
+                                <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
+                                <span class="price-tag">{{ $comic['price'] }}</span>
+                            </div>
                             <div>
-                                <div class="img-container p-relative">
-                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
-                                    <span class="price-tag">{{ $comic['price'] }}</span>
-                                </div>
-                                <div>
-                                    <h5>{{ $comic['series'] }}</h5>
-                                </div>
+                                <h5>{{ $comic['series'] }}</h5>
                             </div>
                         </div>
-                    @endforeach
-                    {{-- LOAD MORE BUTTON --}}
-                    <div class="text-center mt-3 mb-4">
-                        <button type="button" class="btn btn-primary">LOAD MORE</button>
                     </div>
-            </div>
+                @endforeach
+                {{-- LOAD MORE BUTTON --}}
+                <div class="text-center mt-3 mb-4">
+                    <button type="button" class="btn btn-primary">LOAD MORE</button>
+                </div>
         </div>
-    </main>
+    </div>
 
     {{-- SECTION BG-BLUE --}}
     <div class="container-fluid py-5 bg-blu-icon">
@@ -98,9 +77,4 @@
             </div>
         </div>
     </div>
-
-    {{-- FOOTER --}}
-    @include('partials.footer')
-</body>
-
-</html>
+@endsection

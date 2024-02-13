@@ -2,8 +2,8 @@
     <!-- TOP FOOTER -->
     <div class="container-fluid top-footer">
       <div class="container">
-        <div class="row">
-          <div class="col-2 p-4">
+        <div class="row footer-logo">
+          <div class="col-2 p-4 pb-2">
             <h3>DC COMICS</h3>
             <ul class="list-unstyled">
               <li><a href="#">Characters</a></li>
@@ -20,7 +20,7 @@
               <li><a href="#">Shop DC Collectibles</a></li>
             </ul>
           </div>
-          <div class="col-2 p-4">
+          <div class="col-2 p-4 pb-2">
             <h3>DC</h3>
             <ul class="list-unstyled">
               <li><a href="#">Terms Of Use</a></li>
@@ -36,7 +36,7 @@
               <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
-          <div class="col-2 p-4">
+          <div class="col-2 p-4 pb-2">
             <h3>SITES</h3>
             <ul class="list-unstyled">
               <li><a href="#">DC</a></li>
@@ -46,7 +46,11 @@
               <li><a href="#">DC Power Visa</a></li>
             </ul>
           </div>
-          <div class="col-6 footer-logo"></div>
+          <div class="row">
+            <div class="col-7">
+              <p> All Site Content TM and © 2020 DC Enterteinment, unless otherwise <a class="text primary" href="#">noted here</a>. All rights reserved. <br> <a class="text primary" href="#">Cookie Policy</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
