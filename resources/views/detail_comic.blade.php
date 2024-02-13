@@ -3,32 +3,37 @@
 @section('content')
     {{-- JUMBOTRON --}}
     <div class="container-fluid jumbo">
-        <button type="button" class="btn btn-primary button-series">CURRENT SERIES</button>
+        <img class="img-position" src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
     </div>
 
-    {{-- COMICS SECTION --}}
-    <div class="container py-5">
-        <div class="row align-items-center">
-            @foreach ($comics as $comic)
-                    <div class="col-2 card_container">
-                        {{-- COMIC CARD --}}
-                        <a href="{{ route('detail-comic', ['param' => $comic['id']]) }}">
-                            <div>
-                                <div class="img-container p-relative">
-                                    <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
-                                    <span class="price-tag">{{ $comic['price'] }}</span>
-                                </div>
-                                <div>
-                                    <h5>{{ $comic['series'] }}</h5>
-                                </div>
-                            </div>
-                        </a>
+    {{-- SECTION BG-BLUE JUMBO --}}
+    <div class="container-fluid py-4 bg-blu-icon">
+        
+    </div>
+
+    {{-- SECTION INFO COMIC --}}
+    <div class="container-fluid bg-white py-5">
+        <div class="container section-comic-info">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h2>{{ $comic['title'] }}</h2>
+                    <div class="d-flex justify-content-between px-3 bg-success text-white">
+                        <p>U.S. Price: {{ $comic['price'] }}</p>
+                        <p>Type: {{ $comic['type'] }}</p>
                     </div>
-                @endforeach
-                {{-- LOAD MORE BUTTON --}}
-                <div class="text-center mt-3 mb-4">
-                    <button type="button" class="btn btn-primary">LOAD MORE</button>
+                    <p>{{ $comic['description'] }}</p>
                 </div>
+                <div class="col-3 text-end">
+                    <p class="mb-1">Advertisement</p>
+                    <img src="{{ Vite::asset('resources/img/adv.jpg') }}" alt="">
+                </div>
+                {{-- LOAD MORE BUTTON --}}
+                <div class="col-12 text-center my-5">
+                    <a href="/comics">
+                        <button type="button" class="btn btn-primary">Go Back</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
