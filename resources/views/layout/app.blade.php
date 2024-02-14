@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg+xml" href="{{ Vite::asset('resources/img/favicon.ico') }}" />
-    <title>Laravel Home - DC Comics</title>
+    <title>Laravel {{ Route::currentRouteName() }} - DC Comics</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
